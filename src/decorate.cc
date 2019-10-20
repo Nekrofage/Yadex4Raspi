@@ -5,6 +5,8 @@
     6-17-2007
 */
 
+#include <bsd/stdlib.h>
+#include <bsd/string.h>
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>

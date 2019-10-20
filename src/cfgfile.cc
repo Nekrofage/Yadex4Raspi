@@ -26,6 +26,8 @@ Place, Suite 330, Boston, MA 02111-1307, USA.
 */
 
 
+#include <bsd/stdlib.h>
+#include <bsd/string.h>
 #include "yadex.h"
 
 #include <sys/types.h>
