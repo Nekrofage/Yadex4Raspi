@@ -85,7 +85,7 @@ endif
 # Options used when compiling Atclib.
 CFLAGS  = -pedantic
 CFLAGS += -Wall
-CFLAGS += -Werror
+#CFLAGS += -Werror
 CFLAGS += -Wno-variadic-macros
 
 # Options used when compiling and linking Yadex.
@@ -95,7 +95,7 @@ CFLAGS += -Wno-variadic-macros
 CXXFLAGS  = -std=c++11
 CXXFLAGS += -pedantic
 CXXFLAGS += -Wall
-CXXFLAGS += -Werror
+#CXXFLAGS += -Werror
 CXXFLAGS += -Wno-variadic-macros
 #CXXFLAGS += -DWHITE_BACKGROUND
 LDFLAGS  = -g
@@ -331,7 +331,7 @@ yadex: $(OBJDIR)/yadex
 $(OBJDIR)/yadex: $(OBJ_CONFIG) $(OBJ_YADEX) $(OBJ_ATCLIB) $(OBJ_COMPAT) $(MAKEFILE)
 	@echo "** Linking Yadex"
 	$(CXX) $(OBJ_CONFIG) $(OBJ_YADEX) $(OBJ_ATCLIB) $(OBJ_COMPAT) -o $@		\
-	  -L$(X11LIBDIR) -lX11 -lm -lc $(LDFLAGS)
+	  -L$(X11LIBDIR) -lX11 -lm -lc -lbsd $(LDFLAGS)
 
 .PHONY: test
 test:
